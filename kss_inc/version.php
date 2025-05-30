@@ -1,0 +1,1 @@
+<?php define('KSSVERSION','M10-P158'); ?>

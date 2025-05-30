@@ -1,0 +1,1 @@
+<?php define('SOFTRSAMODE',0); define('SOFTRSAEKEY','');  define('SOFTRSANKEY',''); ?>

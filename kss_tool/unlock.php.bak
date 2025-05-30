@@ -1,0 +1,16 @@
+<?php  /*# Copyright(C) 2008-2014 www.hphu.com, All rights Reserved.  version:100414  KEY:ksreg20151129 */ ?><?php
+require('../kss_inc/inc.php');
+$HY_82d6536edf704aabc5=New mysql_cls;
+$HY_82d6536edf704aabc5->HY_8adfa6fa6f18be3e6f($HY_e83242934e1fdef61f);
+$HY_82d6536edf704aabc5->HY_e6e8aeec74e7b16058('update `kss_tb_manager` set `username`=\'admin\',`password`=\'0192023a7bbd73250516f069df18b500\' where `id`=1');
+$HY_246f1953d6efdb4f8a=$HY_82d6536edf704aabc5->HY_e6e8aeec74e7b16058('delete from kss_tb_log_login where logintype<>1');
+if($HY_246f1953d6efdb4f8a!==false){
+if(rename(__FILE__, __FILE__.'.bak')){
+HY_bd307d155f057feb55('解锁成功，用户名被重置为admin,密码被重置为admin123,该接口文件已安全重命名.');
+}else{
+HY_bd307d155f057feb55('解锁成功，用户名被重置为admin,密码被重置为admin123, 接口文件自动改名失败，安全起见手动将接口文件'.__FILE__.'请改名为'.__FILE__.'.bak');	
+}
+}else{
+HY_bd307d155f057feb55('解锁失败:'.$HY_82d6536edf704aabc5->HY_8def866213a3d931dd());
+}
+?>
